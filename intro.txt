@@ -1,0 +1,22 @@
+this is the text file - to keep me motivated and to keep me content in working for this 
+
+input - 
+The script is designed to intercept and process network packets in real-time.
+Therefore, you need network traffic on the machine where the script is running. 
+This could be achieved by sending/receiving packets to/from the machine, or by running 
+the script on a network gateway or router.
+
+Expected Output:
+IPs, Ports, and Prefixes:
+If a packet's source IP, destination port, or source IP prefix matches the defined banned lists
+in the JSON configuration, the script will print a message indicating that the packet is blocked.
+
+Ping Attacks:
+If the script is configured to block ICMP (ping) attacks (BlockPingAttacks set to True),
+it will enforce a threshold for the number of pings allowed from a source IP within 
+a specified time frame (TimeThreshold and PacketThreshold in the JSON configuration). 
+If this threshold is exceeded, the script will print a message and drop the packet.
+
+Console Output:
+The script will print messages to the console indicating the actions taken for each packet, 
+such as whether it was accepted or dropped.
